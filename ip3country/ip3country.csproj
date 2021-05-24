@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
     <Authors>Vijaye Raji</Authors>
     <Company>Statsig</Company>
     <Description>A zero-dependency, super small, IP address to 2-letter country code lookup library.</Description>
@@ -9,7 +9,7 @@
     <PackOnBuild>true</PackOnBuild>
     <PackageId>IP3Country</PackageId>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
