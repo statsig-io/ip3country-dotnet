@@ -21,10 +21,10 @@ This site or product includes IP2Location LITE data available from <a href="http
 using IP3Country;
 
 // Lookup using ip4 str
-var country = CountryLookup.LookupIPStr.LookupIPStr("123.45.67.8"); // 'KR'.
+var country = CountryLookup.LookupIPStr("123.45.67.8"); // => 'KR'
 
 // Lookup using numeric ip
-country = CountryLookup.LookupIPNumber(2066563848);
+country = CountryLookup.LookupIPNumber(2066563848); // => 'KR'
 ```
 
 ## Accuracy
