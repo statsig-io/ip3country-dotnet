@@ -4,11 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Authors>Vijaye Raji</Authors>
     <Company>Statsig</Company>
-    <Description>This is a zero-dependency, super small, IP address to 2-letter country code lookup library.</Description>
+    <Description>A zero-dependency, super small, IP address to 2-letter country code lookup library.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>IP3Country</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,5 +19,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ip_supalite.table" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../LICENSE" Pack="true" PackagePath=""/>
+  </ItemGroup>  
 
 </Project>
