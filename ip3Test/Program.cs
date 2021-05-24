@@ -10,7 +10,7 @@ namespace ip3Test
         static void Main(string[] args)
         {
             var p = new Program();
-            // p.RunRandomTests();
+            p.RunRandomTests();
             p.RunLookupTests();
         }
 
@@ -68,16 +68,19 @@ namespace ip3Test
                 ["27.62.93.211"] = "IN",
             };
 
+            var failed = false;
             foreach (var kv in testTable)
             {
                 var expected = kv.Value;
                 var result = CountryLookup.LookupIPStr(kv.Key);
-
                 if (expected != result)
                 {
+                    failed = true;
                     Console.WriteLine($"F: {kv.Key}: {result}, Expected: {expected}");
                 }
             }
+
+            Console.WriteLine(failed ? "--- Lookup Tests Failed ---" : "--- Lookup Tests Passed ---");
         }
 
         void RunRandomTests()
