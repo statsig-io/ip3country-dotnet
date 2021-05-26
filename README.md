@@ -1,6 +1,6 @@
-# ip3country_dotnet
+# ip3country-dotnet
 
-This is a zero-dependency, super small, IP address to 2-letter [country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) lookup library. There are already several libraries available, but none met our requirements for binary size and lookup speed.
+A zero-dependency, super small, IP address to 2-letter [country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) lookup library. There are already several libraries available, but none met our requirements for binary size and lookup speed.
 
 This project in its entirety is <500KB, compared to most alternatives out there that are north of 40MB (but might provide more than just countries).
 
