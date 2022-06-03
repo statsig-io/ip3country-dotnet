@@ -11,22 +11,31 @@ namespace IP3Country
         static List<string> countryCodes = new List<string>();
         static List<Int64> ipRanges = new List<long>();
         static List<string> countryTable = new List<string>();
+        static object initLock = new Object();
 
         public static void Initialize()
         {
+            // Pre lock optimization
             if (initialized)
             {
                 return;
             }
 
-            var assembly = Assembly.GetExecutingAssembly();
-            var resName = assembly.GetName().Name + ".ip_supalite.table";
-            using (var stream = assembly.GetManifestResourceStream(resName))
+            lock (initLock)
             {
-                var memStream = new MemoryStream();
-                stream.CopyTo(memStream);
-                var buffer = memStream.ToArray();
-                InitializeWithBuffer(buffer);
+                if (initialized) 
+                {
+                    return;
+                }
+                var assembly = Assembly.GetExecutingAssembly();
+                var resName = assembly.GetName().Name + ".ip_supalite.table";
+                using (var stream = assembly.GetManifestResourceStream(resName))
+                {
+                    var memStream = new MemoryStream();
+                    stream.CopyTo(memStream);
+                    var buffer = memStream.ToArray();
+                    InitializeWithBuffer(buffer);
+                }
             }
         }
 

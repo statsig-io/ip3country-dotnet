@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp2.1;net461;net5.0</TargetFrameworks>
-    <Authors>Vijaye Raji</Authors>
+    <TargetFrameworks>netstandard2.0;net461;net5.0;net6.0</TargetFrameworks>
     <Company>Statsig</Company>
     <Description>A zero-dependency, super small, IP address to 2-letter country code lookup library.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
